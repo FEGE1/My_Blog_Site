@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block bodyBlock %}
+<br>
+<div class="container">
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <h1>Delete {{post.title}} ?</h1>
+        <h3>Create date: {{post.create_date}}</h3>
+        <form method="post">
+        {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Delete" class="btn btn-danger">
+            <a href="{% url 'dashboard' %}">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+body{
+    background-color: whitesmoke;
+}
+.profile_pic{
+    max-width: 200px;
+    max-height: 200px;
+}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block bodyBlock %}
+    <br>
+
+ 
+      <div class="h-100 p-5 text-bg-dark rounded-3">
+        <h2>{{post.title}}</h2>
+        <p>{{post.content}}</p>
+        <button class="btn btn-outline-light" type="button">{{post.author}}</button>
+      </div>
+      {% if user.is_authenticated %}
+        <form method='POST'>
+          {% csrf_token %}
+          {{form.as_p}}
+          <input type="submit" value="Send comment" class="btn btn-success">
+        </form>
+      {% endif %}
+
+      {% for comment in comments %}
+        <div class="container">
+          <hr>
+          <h3>{{comment.comment_author.username}}</h3>
+          <p>{{comment.comment_content}}</p>
+          <p>{{comment.comment_date}}</p>
+          {% if user.id == comment.comment_author.id %}
+            <a href="{% url 'blog:comment_delete' id=comment.id %}"><button type="submit" class="btn btn-danger">Delete</button></a>
+            <hr>
+          {% endif %}
+        </div>
+      {% endfor %}
+ 
+{% endblock bodyBlock %}

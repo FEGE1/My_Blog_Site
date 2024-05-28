@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block bodyBlock %}
+<div class="container">
+    <h1>Dashboard</h1>
+    <hr>
+    <h2>Create Post</h2>
+    <a href="{% url 'blog:create' %}"><button class="btn btn-success">Create</button></a>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Create Date</th>
+            <th scope="col">Published Date</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+                <tr>
+                    <th scope="row"><a href="{% url 'detail' pk=post.pk%}">{{post.title}}</a></th>
+                    <td>{{post.create_date}}</td>
+                    <td>{{post.published_date}}</td>
+                    <td><a href="{% url 'blog:update' id=post.id%}"><button class="btn btn-warning">Update</button></a></td>
+                    <td><a href="{% url 'blog:delete' id=post.id%}"><button class="btn btn-danger">DELETE</button></a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock bodyBlock %}
