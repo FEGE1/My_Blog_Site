@@ -1,7 +1,81 @@
 body{
     background-color: whitesmoke;
 }
+
 .profile_pic{
     max-width: 200px;
     max-height: 200px;
+}
+
+/* base2 style */
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+}
+
+a{
+    color: inherit;
+}
+
+    /* general class start */
+
+.flex{
+    display: flex;
+}
+
+    /* general class end */
+
+    /* nav-bar start */
+
+
+.sticky{
+    background-color: #F9FAF8!important;
+    height: 80px!important;
+}  
+
+.sticky ul{
+    color: #1F2937;
+}  
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 60px 0 60px;
+    align-items: center;
+    font-size: 18px;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    transition: 1s;
+}
+
+.nav-left ul{
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-right ul{
+    align-items: center;
+    gap: 35px;
+}
+
+.logo{
+    font-size: 24px;
+}
+    /* nav-bar end */
+
+.container2{
+    height: 500px;
+    width: 100%;
+    background-color: #1F2937;
 }
