@@ -1,5 +1,6 @@
 body{
-    background-color: whitesmoke;
+    background-color: #1F2937;
+    color: #F9FAF8;
 }
 
 .profile_pic{
@@ -21,10 +22,58 @@ a{
     color: inherit;
 }
 
+section{
+    width: 100%;
+}
+
     /* general class start */
 
 .flex{
     display: flex;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    background: none;
+    color: #F9FAF8;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 100;
+    border: 1px solid #F9FAF8;
+    border-radius: 8px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    font-weight: 400;
+    border: 2px solid #F9FAF8;
+}
+
+input{
+    border: none;
+    background-color: #F9FAF8;
+    margin: 0 10px 0 3px;
+    height: 20px!important;
+}
+
+.input{
+    width: 200px;
+    height: 30px;
+    background-color: #F9FAF8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    opacity: 100%;
+}
+
+.input:hover{
+    opacity: 85%;
 }
 
     /* general class end */
@@ -34,7 +83,7 @@ a{
 
 .sticky{
     background-color: #F9FAF8!important;
-    height: 80px!important;
+    height: 60px!important;
 }  
 
 .sticky ul{
@@ -43,6 +92,7 @@ a{
 
 header{
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 200;
 }
@@ -50,11 +100,10 @@ header{
 #navbar{
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    height: 100px;
     padding: 0 60px 0 60px;
     align-items: center;
     font-size: 18px;
-    background-color: #1F2937;
     color: #F9FAF8;
     transition: 1s;
 }
@@ -74,8 +123,125 @@ header{
 }
     /* nav-bar end */
 
-.container2{
-    height: 500px;
+    /* index.html */
+
+.container{
     width: 100%;
-    background-color: #1F2937;
 }
+/* section1 */
+#index-section1{
+    background-image: url("../../media/template_imgs/index-background.png");
+    background-size: cover;
+}
+#index-section1 .container{
+    height: 670px;
+    justify-content: center;
+    background-color: #1F2937;
+    opacity: 90%;
+}
+
+#index-section1 .container div:first-child{
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+#index-section1 img{
+    width: 200px;
+    align-items: center;
+}
+
+#index-section1 .head{
+    color: #F9FAF8;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#index-section1 .text{
+    color: #F9FAF8;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#index-section1 .btn{
+    margin-top: 20px;
+}
+
+/* section1 end */
+
+/* section2 start */
+
+#index-section2{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+
+    padding: 20px 40px 20px 40px;
+}
+
+#index-section2  .head{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+#index-section2  .flex{
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+#search-icon{
+    color: #1F2937;
+}
+
+.author-pp{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.blog-list{
+    border-top: 2px solid #f9faf88a;
+    margin-top: 20px;
+}
+
+.blog-user{
+    align-items: center;
+    gap: 5px!important;
+    font-weight: 300!important;
+    font-size: 17px!important;
+}
+
+.blog-content{
+    padding-bottom: 10px;
+}
+
+.blog-list .flex-column{
+    align-items: flex-start;
+    margin: 40px 30% 0 40px;
+    gap: 8px;
+}
+
+.blog-content .flex-column{
+    margin: 5px 0 0 0;
+}
+
+.border{
+    margin-left: 40px;
+    width: 80%;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid #f9faf88a;
+}
+
+/* section2 end */
+
+    /* index.html */

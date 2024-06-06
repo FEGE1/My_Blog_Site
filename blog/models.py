@@ -25,7 +25,7 @@ class Post(models.Model):
     
     
 class UserModel(models.Model):
-    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    user = models.OneToOneField(User,on_delete=models.CASCADE,related_name="UserModel")
     #additional
     profile_pic = models.ImageField(upload_to='profile_pics',blank=True,null=True)
 

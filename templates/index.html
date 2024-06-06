@@ -1,6 +1,66 @@
 {% extends "base2.html" %}
 {% load static %}
 {% block bodyBlock %}
+
+<section id="index-section1">
+<div class="container flex">
+    <div class="flex-column">
+        <div class="head">
+            <p>Share your own story</p>
+        </div>
+        <div class="text">
+            <p>Here you can write the stories you want and share your memories with people.</p>
+        </div>
+        <a href=""><button class="btn">Sign Up</button></a>
+    </div>
+</div>
+</section>
+<section id="index-section2">
+    <div class="head">
+        <ul class="flex">
+            <li><p>Recent</p></li>
+            <li>|</li>
+            <li>Popular</li>
+            <li>|</li>
+            <li>Most viewed</li>
+            <li>|</li>
+            <li>Most liked</li>
+        </ul>
+        <ul class="flex">
+            <div class="input">
+                <input class="input" type="text">
+                <a href="#"><i id="search-icon" class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </ul>
+    </div>
+    
+    <div class="blog-list">
+        {% for post in posts %}
+        <a href="details/{{post.id}}">
+            <div class="flex-column main">
+                <div class="blog-user flex">
+                    <img class="author-pp" src="{{post.author.UserModel.profile_pic.url}}" alt="author-pp">
+                    <p class="author-name">{{post.author}}</p>
+                    <span style="margin-bottom:10px;"><p>.</p></span>
+                    <span style="opacity: 70%;"><p>{{post.create_date.date}}</p></span>
+                </div>
+                <div class="blog-content">
+                    <div class="flex-column">
+                        <h2>{{post.title}}</h2>
+                        <p>{{post.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div class="border"></div>
+        {% endfor %}
+        
+    </div>
+</section>
+<div class="container"></div>
+
+
+    {% comment %}
     <br>
     <div class="container">
         <div class="list-group">
@@ -19,5 +79,6 @@
         {% endfor %}
         </div>
         
-    </div>
+    </div> 
+    {% endcomment %}
 {% endblock bodyBlock %}
