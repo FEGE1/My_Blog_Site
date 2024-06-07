@@ -1,4 +1,4 @@
-{% extends "base2.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% block bodyBlock %}
 
@@ -11,20 +11,20 @@
         <div class="text">
             <p>Here you can write the stories you want and share your memories with people.</p>
         </div>
-        <a href=""><button class="btn">Sign Up</button></a>
+        <a href="{% url 'register' %}"><button class="btn">Sign Up</button></a>
     </div>
 </div>
 </section>
 <section id="index-section2">
     <div class="head">
         <ul class="flex">
-            <li><p>Recent</p></li>
+            <li><a href="#"><p>Recent</p></a></li>
             <li>|</li>
-            <li>Popular</li>
+            <li><a href="#"><p>Popular</p></a></li>
             <li>|</li>
-            <li>Most viewed</li>
+            <li><a href="#"><p>Most viewed</p></a></li>
             <li>|</li>
-            <li>Most liked</li>
+            <li><a href="#"><p>Most liked</p></a></li>
         </ul>
         <ul class="flex">
             <div class="input">
@@ -47,7 +47,7 @@
                 <div class="blog-content">
                     <div class="flex-column">
                         <h2>{{post.title}}</h2>
-                        <p>{{post.content}}</p>
+                        <span style="font-style:italic;opacity: 80%;"><p>{{post.content}}</p></span>
                     </div>
                 </div>
             </div>

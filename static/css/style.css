@@ -56,7 +56,7 @@ section{
 
 input{
     border: none;
-    background-color: #F9FAF8;
+    background-color: #e5e5e5;
     margin: 0 10px 0 3px;
     height: 20px!important;
 }
@@ -64,7 +64,7 @@ input{
 .input{
     width: 200px;
     height: 30px;
-    background-color: #F9FAF8;
+    background-color: #e5e5e5;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -178,15 +178,14 @@ header{
 #index-section2{
     width: 80%;
     margin: auto;
-    margin-top: 20px;
-
-    padding: 20px 40px 20px 40px;
+    padding: 25px 40px 20px 40px;
+    border-radius: 8px;
 }
 
 #index-section2  .head{
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 80%;
     margin: auto;
 }
 
@@ -195,6 +194,11 @@ header{
     align-items: center;
     gap: 20px;
     font-size: 18px;
+    font-weight: 100;
+}
+
+#index-section2  .flex p:hover{
+    color: #f9faf8b4;
 }
 
 #search-icon{
@@ -210,8 +214,8 @@ header{
 }
 
 .blog-list{
-    border-top: 2px solid #f9faf88a;
-    margin-top: 20px;
+    border-top: 1px solid #f9faf88a;
+    margin: 20px 100px 0 100px;
 }
 
 .blog-user{
@@ -223,6 +227,8 @@ header{
 
 .blog-content{
     padding-bottom: 10px;
+    overflow: hidden;
+    max-height: 200px;
 }
 
 .blog-list .flex-column{
