@@ -28,7 +28,7 @@
         </ul>
         <ul class="flex">
             <div class="input">
-                <input class="input" type="text">
+                <input class="input" type="text" placeholder="Search...">
                 <a href="#"><i id="search-icon" class="fa-solid fa-magnifying-glass"></i></a>
             </div>
         </ul>
@@ -50,6 +50,7 @@
                         <span style="font-style:italic;opacity: 80%;"><p>{{post.content}}</p></span>
                     </div>
                 </div>
+                <p>{{post.comment_count.count}} - comment</p>
             </div>
         </a>
         <div class="border"></div>

@@ -9,3 +9,4 @@ if(path=="/"){
 else{
     nav.classList.add( "sticky");
 }
+//navbar end

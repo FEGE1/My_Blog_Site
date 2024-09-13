@@ -2,31 +2,39 @@
 {% block bodyBlock %}
     <br>
 
- 
-      <div class="h-100 p-5 text-bg-dark rounded-3">
+    <section id="detail-section1">
+      <div>
+        <div class="blog-user flex">
+          <img class="author-pp" src="{{post.author.UserModel.profile_pic.url}}" alt="author-pp">
+          <p class="author-name">{{post.author}}</p>
+          <span style="margin-bottom:10px;"><p>.</p></span>
+          <span style="opacity: 70%;"><p>{{post.create_date.date}}</p></span>
+        </div>
         <h2>{{post.title}}</h2>
         <p>{{post.content}}</p>
-        <button class="btn btn-outline-light" type="button">{{post.author}}</button>
       </div>
-      {% if user.is_authenticated %}
-        <form method='POST'>
-          {% csrf_token %}
-          {{form.as_p}}
-          <input type="submit" value="Send comment" class="btn btn-success">
-        </form>
-      {% endif %}
-
+    </section>
+    <section id="detail-section2">
+      <div>
+        {% if user.is_authenticated %}
+          <form method='POST'>
+            {% csrf_token %}
+            <div class="flex">
+              {{form.comment_content}}
+            </div>
+            <input type="submit" value="Send comment" class="btn btn-success">
+          </form>
+        {% endif %}
+      </div>
       {% for comment in comments %}
-        <div class="container">
-          <hr>
+        <div class="comment">
           <h3>{{comment.comment_author.username}}</h3>
           <p>{{comment.comment_content}}</p>
           <p>{{comment.comment_date}}</p>
           {% if user.id == comment.comment_author.id %}
             <a href="{% url 'blog:comment_delete' id=comment.id %}"><button type="submit" class="btn btn-danger">Delete</button></a>
-            <hr>
           {% endif %}
-        </div>
+        </div>      
       {% endfor %}
- 
+    </section>    
 {% endblock bodyBlock %}

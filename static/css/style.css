@@ -59,6 +59,7 @@ input{
     background-color: #e5e5e5;
     margin: 0 10px 0 3px;
     height: 20px!important;
+    outline: none;
 }
 
 .input{
@@ -251,3 +252,53 @@ header{
 /* section2 end */
 
     /* index.html */
+
+    /* blog_detail.html */
+
+/* section1 */
+#detail-section1{
+    padding-top: 60px;
+}
+
+#detail-section1 div{
+    margin: 0 10% 0 10%;
+}
+/* section1 end */
+
+/* section2 */
+#detail-section2{
+    padding-top: 10px;
+}
+
+#detail-section2 div{
+    margin: 0 10% 0 10%;
+}
+
+#detail-section2 #id_comment_content{
+    margin: 20px;
+    border: none;
+    border-radius: 8px;
+    height: 100%!important;
+    width: 100%!important;
+    outline: none;
+    font-size: 15px;
+    align-content: center;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+#detail-section2 div:has(>#id_comment_content){
+    background-color: whitesmoke;
+    border-radius: 8px;
+    width: 40%;
+    height: 50px;
+    align-items: center;
+    margin: 0;
+}
+
+#detail-section2 .comment{
+    margin: 50px 10% 50px 10%;
+}
+
+/* section2 end */
+
+    /* blog_detail.html */
