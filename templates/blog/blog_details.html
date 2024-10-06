@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block bodyBlock %}
-    <br>
-
+  <div id="detail-div-main">
     <section id="detail-section1">
       <div>
         <div class="blog-user flex">
@@ -14,7 +13,7 @@
         <p>{{post.content}}</p>
       </div>
     </section>
-    <section id="detail-section2">
+    <section id="detail-section2">  
       <div>
         {% if user.is_authenticated %}
           <form method='POST'>
@@ -24,6 +23,8 @@
             </div>
             <input type="submit" value="Send comment" class="btn btn-success">
           </form>
+        {% else %}
+        <h3 style="color:#1F2937;">Yorum yapmak için kayıt olun!</h3>
         {% endif %}
       </div>
       {% for comment in comments %}
@@ -37,4 +38,5 @@
         </div>      
       {% endfor %}
     </section>    
+  </div>  
 {% endblock bodyBlock %}

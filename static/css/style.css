@@ -38,7 +38,7 @@ section{
 }
 
 .btn{
-    background: none;
+    background: #1F2937;
     color: #F9FAF8;
     width: 150px;
     height: 40px;
@@ -256,12 +256,27 @@ header{
     /* blog_detail.html */
 
 /* section1 */
-#detail-section1{
-    padding-top: 60px;
+#detail-div-main{
+    background-color: #F9FAF8;
+    color: black;
+    margin: 70px 10% 0 10%;
+    border-radius: 8px;
 }
 
-#detail-section1 div{
-    margin: 0 10% 0 10%;
+#detail-section1{
+    padding-top: 30px;
+}
+
+#detail-section1>div:first-child{
+    padding: 0 8% 0 8%;
+    margin: 0 2% 0 2%;
+    line-height: 1.3em;
+    border: solid 1px rgba(128, 128, 128, 0.408);
+    border-radius: 8px;
+}
+
+#detail-section1 .blog-user{
+margin: 2vw 0 2vw 0;
 }
 /* section1 end */
 
